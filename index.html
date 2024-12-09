@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fashion</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </head>
 <body>
     <section class="banner">
@@ -79,12 +81,12 @@
     <section class="our">
         <h1 class="title">Our products</h1>
         <div class="categories">
-            <div class="category active">Sale</div>
-            <div class="category">Hot</div>
-            <div class="category">New arrivals</div>
-            <div class="category">Accessories</div>
+            <div class="category tab active" data-tab="tab1">Sale</div>
+            <div class="category tab" data-tab="tab2">Hot</div>
+            <div class="category tab" data-tab="tab3">New arrivals</div>
+            <div class="category tab" data-tab="tab4">Accessories</div>
         </div>
-        <div class="list">
+        <div class="list tab-content active" id="tab1">
             <div class="product">
                 <img src="/images/prod1.svg">
                 <h4>Regular Fit Long Sleeve Top</h4>
@@ -133,8 +135,110 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="list tab-content" id="tab2">
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="list tab-content" id="tab3">
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
             <div class="product">
                 <img src="/images/prod1.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="/images/prod2.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="/images/prod1.svg">
+                <h4>Regular Fit Long Sleeve Top</h4>
+                <div class="price">
+                    <p>$38.99</p>
+                    <span>|</span>
+                    <p class="staring">
+                        <span>5.0</span>
+                        <img src="/images/star.svg">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="list tab-content" id="tab4">
+            <div class="product">
+                <img src="/images/prod2.svg">
                 <h4>Regular Fit Long Sleeve Top</h4>
                 <div class="price">
                     <p>$38.99</p>
@@ -190,16 +294,20 @@
             <p>Unlock the ultimate style upgrade with our exclusive offer Enjoy savings of up to 40% off on our latest New Arrivals</p>
             <div class="counter">
                 <div>
-                    <h6>06</h6>
+                    <h6 id="days">00</h6>
                     <span>Days</span>
                 </div>
                 <div>
-                    <h6>18</h6>
+                    <h6 id="hours">00</h6>
                     <span>Hours</span>
                 </div>
                 <div>
-                    <h6>48</h6>
+                    <h6 id="minutes">00</h6>
                     <span>Min</span>
+                </div>
+                <div>
+                    <h6 id="seconds">00</h6>
+                    <span>Sec</span>
                 </div>
             </div>
         </div>
@@ -230,23 +338,38 @@
         <div class="testis">
             <div class="card">
                 <img src="/images/quote.svg">
-                <h3>Emily Wilson</h3>
+                <h3>1Emily Wilson</h3>
                 <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
             </div>
             <div class="card active">
                 <img src="/images/quote.svg">
-                <h3>Emily Wilson</h3>
+                <h3>2Emily Wilson</h3>
                 <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
             </div>
             <div class="card">
                 <img src="/images/quote.svg">
-                <h3>Emily Wilson</h3>
+                <h3>3Emily Wilson</h3>
+                <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+            </div>
+            <div class="card">
+                <img src="/images/quote.svg">
+                <h3>4Emily Wilson</h3>
+                <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+            </div>
+            <div class="card active">
+                <img src="/images/quote.svg">
+                <h3>5Emily Wilson</h3>
+                <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+            </div>
+            <div class="card">
+                <img src="/images/quote.svg">
+                <h3>6Emily Wilson</h3>
                 <p>The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
             </div>
         </div>
         <div class="slide-buttons">
-            <div class="active"><img src="/images/left.svg"></div>
-            <div><img src="/images/right.svg"></div>
+            <div id="prev"><img src="/images/left.svg"></div>
+            <div id="next"><img src="/images/right.svg"></div>
         </div>
     </section>
     <footer>

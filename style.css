@@ -136,6 +136,10 @@ section.best{
     color: #454545;
 }
 
+.price p{
+    margin-top: 0 !important;
+}
+
 .product .price .staring{
     display: flex;
     align-items: center;
@@ -180,7 +184,6 @@ a.more-products{
 }
 
 .our .list{
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 40px;
@@ -252,7 +255,7 @@ a.more-products{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 5rem;
+    margin: 3rem 30%;
     gap: 2rem;
 }
 
@@ -265,10 +268,12 @@ a.more-products{
     -webkit-box-shadow: 0px 7px 30px 0px rgba(128, 117, 117, 0.226);
     -moz-box-shadow: 0px 7px 30px 0px rgba(128, 117, 117, 0.226);
     border-radius: 10px;
+    display: none;
 }
 
 .testis .card.active{
     background-color: pink;
+    display: flex;
 }
 
 .testis .card img{
@@ -305,9 +310,10 @@ a.more-products{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.slide-buttons div.active{
+.slide-buttons div:hover{
     background-color: pink;
 }
 
@@ -387,4 +393,12 @@ footer .links a{
     align-items: center;
     justify-content: center;
     color: purple;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active{
+    display: grid;
 }
