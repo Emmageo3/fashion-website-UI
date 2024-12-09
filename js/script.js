@@ -68,3 +68,9 @@ $(document).ready(function () {
         $(`#${tabId}`).addClass("active");
     });
 })
+
+$(document).ready(function () {
+    $(".menu-display").on("click", function () {
+        $(".nav-mobile").toggleClass("show"); // Ajoute ou enlève la classe "show"
+    });
+});
