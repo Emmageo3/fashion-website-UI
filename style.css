@@ -585,6 +585,10 @@ footer .links a:hover{
         align-items: center;
         gap: 2rem;
     }
+
+    footer .links a{
+        font-size: 16px;
+    }
 }
 
 
