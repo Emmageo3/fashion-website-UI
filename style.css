@@ -11,6 +11,10 @@ a{
     text-decoration: none;
 }
 
+input:focus{
+    outline: none;
+}
+
 h1.title{
     font-size: 64px;
     color: purple;
@@ -280,5 +284,107 @@ a.more-products{
 }
 
 .testis .card.active p{
+    color: purple;
+}
+
+.slide-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.slide-buttons div{
+    box-shadow: 0px 7px 30px 0px rgba(128, 117, 117, 0.226);
+    -webkit-box-shadow: 0px 7px 30px 0px rgba(128, 117, 117, 0.226);
+    -moz-box-shadow: 0px 7px 30px 0px rgba(128, 117, 117, 0.226);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-buttons div.active{
+    background-color: pink;
+}
+
+footer{
+    background-color: purple;
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+footer .socials{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .socials h6{
+    color: #fff;
+    font-size: 22px;
+}
+
+footer .socials .images{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer h2{
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+footer .links{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+footer .links a{
+    color: #fff;
+    font-size: 20px;
+}
+
+.newsletter form{
+    border: 2px solid #fff;
+    width: 450px;
+    height: 57px;
+    margin-top: 2rem;
+}
+
+.newsletter form input{
+    width: 70%;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    padding: 1rem;
+    color: #fff;
+}
+
+
+.newsletter form button{
+    height: 100%;
+    width: 29%;
+    color: purple;
+    font-weight: bold;
+}
+
+.rights{
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: purple;
 }
